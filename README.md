@@ -1,144 +1,149 @@
-♟️ Chess Engine with AI (Pygame)
+# Chess Engine with AI (Pygame)
 
-A fully functional desktop chess game built using Python + Pygame, featuring a custom chess engine, legal move validation, and an AI opponent powered by NegaMax with Alpha–Beta pruning.
+A fully functional desktop chess game built using Python and Pygame, featuring a custom chess engine, legal move validation, and an AI opponent powered by NegaMax with Alpha–Beta pruning.
 
-This project focuses on implementing chess from scratch — including game rules, move generation, state evaluation, and AI decision-making.
+This project focuses on implementing chess from scratch, including game rules, move generation, state evaluation, and AI decision-making.
 
-🚀 Features
+---
 
-Complete chess rule implementation, Player vs Player mode, Player vs AI mode, Legal move validation system, Checkmate & stalemate detection, Castling, en-passant, pawn promotion, Move animations & square highlighting, Undo moves (Z key), Game reset (R key)
+## Features
 
-🧠 AI System
+- Complete chess rule implementation
+- Player vs Player mode
+- Player vs AI mode
+- Legal move validation
+- Checkmate and stalemate detection
+- Castling, en-passant, and pawn promotion
+- Move animations and square highlighting
+- Undo moves (Z key)
+- Game reset (R key)
+
+---
+
+## AI System
 
 The AI opponent uses:
 
-NegaMax search
+- NegaMax search
+- Alpha–Beta pruning
+- Material-based evaluation function
 
-Alpha–Beta pruning
+### Piece Evaluation
 
-Material-based evaluation function
+| Piece | Value |
+|------|------|
+| Queen | 10 |
+| Rook | 5 |
+| Bishop | 3 |
+| Knight | 3 |
+| Pawn | 1 |
 
-The engine evaluates board states using piece values:
+Search depth is configurable to balance performance and difficulty.
 
-Queen = 10
-Rook  = 5
-Bishop/Knight = 3
-Pawn  = 1
-
-
-Search depth is configurable and balances performance vs difficulty.
-
-AI logic implemented in:
+AI logic is implemented in:
 
 SmartMoveFinder.py
 
+The algorithm recursively evaluates future positions and selects moves that maximize positional advantage while minimizing opponent gain.
 
-The algorithm recursively explores future positions and selects moves that maximize positional advantage while minimizing opponent gain 
+---
 
-SmartMoveFinder
+## Project Architecture
 
-.
-
-⚙️ Project Architecture
 Chess/
 │
-├── ChessMain.py        → Game loop + UI rendering
-├── ChessEngine.py      → Core chess logic & rules
-├── SmartMoveFinder.py  → AI search algorithm
-├── images/             → Piece sprites
+├── ChessMain.py # Game loop and UI rendering
+├── ChessEngine.py # Core chess logic and rules
+├── SmartMoveFinder.py # AI search algorithm
+├── images/ # Piece sprites
 └── chess_game_screenshot.png
 
-🔹 Game Engine
+
+
+---
+
+## Game Engine
 
 Handles:
 
-Board representation (8×8 matrix)
+- Board representation (8×8 matrix)
+- Move generation
+- Legal move filtering
+- Check detection
+- Castling and en-passant logic
+- Move undo system
 
-Move generation
+Implemented inside the GameState class in ChessEngine.py.
 
-Legal move filtering
+---
 
-Check detection
-
-Castling & en-passant logic
-
-Move undo system
-
-Implemented inside GameState class 
-
-ChessEngine
-
-.
-
-🔹 Rendering System (Pygame)
+## Rendering System (Pygame)
 
 Responsible for:
 
-Board drawing
+- Board drawing
+- Piece rendering
+- Move animations
+- Mouse interaction
+- Highlighting valid moves
 
-Piece rendering
+Main game loop is located in ChessMain.py.
 
-Move animations
+---
 
-Mouse interaction
+## Controls
 
-Highlighting valid moves
+| Action        | Input |
+|--------------|-------|
+| Move Piece   | Mouse Click (select → destination) |
+| Undo Move    | Z |
+| Restart Game | R |
+| Quit         | Close Window |
 
-Main game loop located in:
+---
 
-ChessMain.py
+## Installation
 
+1. Clone Repository
 
-ChessMain
+git clone https://github.com/Yuvrraaj/chess-game.git
+cd chess-game
 
-🎮 Controls
-Action	Key / Input
-Move Piece	Mouse Click (select → destination)
-Undo Move	Z
-Restart Game	R
-Quit	Close Window
-🛠️ Installation
-1️⃣ Clone Repository
-git clone https://github.com/Yuvrraaj/<chess-game>.git
-cd <repo-name>
+2. Install Dependencies
 
-2️⃣ Install Dependencies
 pip install pygame
 
-3️⃣ Run the Game
+3. Run the Game
+
 python ChessMain.py
 
-🧩 Core Concepts Implemented
+---
 
-Game State Modeling
+## Core Concepts Implemented
 
-Move Generation Algorithms
+- Game state modeling
+- Move generation algorithms
+- Search trees
+- Recursive game evaluation
+- Alpha–Beta optimization
+- Event-driven GUI programming
 
-Search Trees
+---
 
-Recursive Game Evaluation
+## Future Improvements
 
-Alpha–Beta Optimization
+- Positional evaluation tables
+- Opening book support
+- Move ordering optimization
+- Difficulty levels
+- GUI improvements and sound effects
+- Transposition tables (Zobrist hashing)
 
-Event-driven GUI programming
+---
 
-📈 Future Improvements
+## Author
 
-♟️ Positional evaluation tables
+Yuvraj Jha  
+AI / ML Engineer — Computer Vision and Systems
 
-♟️ Opening book support
-
-♟️ Move ordering optimization
-
-♟️ Difficulty levels
-
-♟️ GUI improvements & sounds
-
-♟️ Transposition tables (Zobrist hashing)
-
-👨‍💻 Author
-
-Yuvraj Jha
-
-AI / ML Engineer — Computer Vision & Systems
 Building intelligent systems combining algorithms, AI, and real-world applications.
