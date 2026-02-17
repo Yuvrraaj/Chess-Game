@@ -6,15 +6,7 @@ This project focuses on implementing chess from scratch — including game rules
 
 🚀 Features
 
-✅ Complete chess rule implementation
-✅ Player vs Player mode
-✅ Player vs AI mode
-✅ Legal move validation system
-✅ Checkmate & stalemate detection
-✅ Castling, en-passant, pawn promotion
-✅ Move animations & square highlighting
-✅ Undo moves (Z key)
-✅ Game reset (R key)
+Complete chess rule implementation, Player vs Player mode, Player vs AI mode, Legal move validation system, Checkmate & stalemate detection, Castling, en-passant, pawn promotion, Move animations & square highlighting, Undo moves (Z key), Game reset (R key)
 
 🧠 AI System
 
